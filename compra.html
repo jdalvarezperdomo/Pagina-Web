@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body class="carrito-pagina">
+    <header>
+        <nav class="navbar">
+            <img src="fondo2.PNG" alt="Logo" width="160px">
+            <div><a href="index.html">Inicio</a></div>
+            <div><a href="motocicletas.html">Motocicletas</a></div>
+            <div><a href="#">Contactos</a></div>
+            <div><a href="compra.html">🛒Compra ahora</a></div>
+            <div id="user-name">
+                <a href="formulario.html" id="login-link">Iniciar sesión</a>
+            </div>
+            
+            
+            <div id="logout-container">
+                <a href="#" id="logout-link" style="display: none;" id="logout-button">Cerrar sesión</a>
+            </div>
+
+            <script src="guardado.js"></script>
+        </nav>
+    </header>
+
+    <div class="carrito">
+        <h2>Carrito de Compras</h2>
+        <div id="carrito-items" class="moto-cards">
+            
+        </div>
+        <button id="pagar" onclick="pagar()">Pagar</button>
+    </div>
+
+    <script src="java.js"></script>
+    
+</body>
+</html>
+
+
+
+
+

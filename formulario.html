@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Inicio de Sesión</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="fondo2.PNG" alt="Logo" width="160px">
+            <div><a href="index.html">Inicio</a></div>
+            <div><a href="motocicletas.html">Motocicletas</a></div>
+            <div><a href="#">Contactos</a></div>
+            <div><a href="compra.html">🛒Compra ahora</a></div>
+            <div><a href="">Iniciar sesión</a></div>
+            <script src="guardado.js"></script>
+        </nav>
+    </header>
+
+    <div class="form-container">
+        <h2>Iniciar sesión</h2>
+        <form id="loginForm" onsubmit="guardarFormulario(event)">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" required>
+            
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" required>
+            
+            <label for="contraseña">Contraseña</label>
+            <input type="password" id="contraseña" required>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script src="login.js"></script>
+    
+</body>
+</html>

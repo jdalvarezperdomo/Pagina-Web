@@ -1,0 +1,317 @@
+/* Estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+header {
+    padding: 10px;
+    background-color: rgb(255, 254, 254);
+    text-align: center;
+}
+
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 20px; 
+    padding: 12px;
+    background-color: rgb(255, 255, 255);
+}
+
+.navbar a {
+    text-decoration: none;
+    color: rgb(109, 108, 108);
+    padding: 5px 10px; 
+    display: block; 
+    text-align: center; 
+}
+
+/* Carrusel de imágenes */
+.carousel {
+    position: relative;
+    width: 100vw; /* Abarca todo el ancho de la ventana */
+    height: 50vh; /* Ajusta la altura al 50% de la altura de la ventana, puedes cambiar este valor */
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.carousel-images img {
+    width: 100vw; /* Ocupa todo el ancho de la pantalla */
+    height: 100%; /* Ajusta la imagen a la altura del contenedor */
+    object-fit: cover; /* Ajusta la imagen para que ocupe todo el contenedor sin deformarse */
+    display: none; /* Oculta todas las imágenes por defecto */
+}
+
+.carousel-images img.active {
+    display: block; /* Solo se muestra la imagen activa */
+}
+
+/* Botones de navegación del carrusel */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    color: #fff; /* Color del texto */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px; /* Tamaño del ícono */
+    transition: background-color 0.3s; /* Suaviza el cambio de color al hacer hover */
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Color de fondo más oscuro al hacer hover */
+}
+
+.prev {
+    left: 10px; /* Posición del botón izquierdo */
+}
+
+.next {
+    right: 10px; /* Posición del botón derecho */
+}
+
+/* Estilos para la sección de motocicletas */
+.destacados {
+    text-align: center;
+    padding: 20px;
+}
+
+.destacados h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.moto-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.moto {
+    width: 300px; /* Ajusta el ancho del cuadro de la moto */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s;
+}
+
+.moto:hover {
+    transform: translateY(-5px);
+}
+
+.moto img {
+    width: 100%; /* La imagen ocupará todo el ancho del cuadro */
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.moto h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+.precio {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 10px 0;
+}
+
+.moto button {
+    background-color: #000000; /* Cambia el color según la paleta de colores de tu sitio */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.moto button:hover {
+    background-color: #ff0000;
+}
+
+/* Nuevos estilos para la página del carrito */
+
+/* Contenedor específico para la página de carrito */
+.carrito-pagina .carrito {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.carrito-pagina .carrito h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Estilo para los productos en el carrito */
+.carrito-pagina #carrito-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.carrito-pagina .moto-cards .moto-card {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 220px;
+    text-align: center;
+}
+
+.carrito-pagina .moto-cards .moto-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.carrito-pagina .moto-cards .moto-card h3 {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.carrito-pagina .moto-cards .moto-card p {
+    font-size: 16px;
+    color: #777;
+}
+
+/* Botón de pagar en la página del carrito */
+.carrito-pagina button {
+    background-color: #000000;
+    color: #fff;
+    font-size: 18px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+    transition: background-color 0.3s ease;
+}
+
+.carrito-pagina button:hover {
+    background-color: #ff0000;
+}
+
+/* Estilos para el formulario */
+.form-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-container form div {
+    margin-bottom: 15px;
+}
+
+.form-container label {
+    font-size: 1rem;
+    color: #333;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+}
+
+.form-container button:hover {
+    background-color: #ff0000;
+}
+
+
+/* Footer */
+footer {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+    border-top: 1px solid #e5e5e5;
+}
+
+.footer-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo img {
+    width: 150px; /* Ajusta el tamaño de la imagen del logo según sea necesario */
+}
+
+.footer-links {
+    display: flex;
+    gap: 40px;
+}
+
+.footer-column h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column li {
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-column a:hover {
+    color: #007BFF; /* Cambia este color si deseas un efecto de hover diferente */
+}

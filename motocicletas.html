@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motocicletas</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="fondo2.PNG" alt="Logo" width="160px">
+            <div><a href="index.html">Inicio</a></div>
+            <div><a href="#">Motocicletas</a></div>
+            <div><a href="#">Contactos</a></div>
+            <div><a href="compra.html">🛒Compra ahora</a></div>
+            <div id="user-name">
+                <a href="formulario.html" id="login-link">Iniciar sesión</a>
+            </div>
+            
+            
+            <div id="logout-container">
+                <a href="#" id="logout-link" style="display: none;" id="logout-button">Cerrar sesión</a>
+            </div>
+            <script src="guardado.js"></script>
+        </nav>
+    </header>
+
+    <div class="destacados">
+        <h2>Motocicletas Disponibles</h2>
+        <div class="moto-cards">
+            <div class="moto" data-id="1">
+                <img src="moto_1.jpeg" alt="Moto 1" class="moto-img">
+                <h3>Benelli 502c</h3>
+                <p class="precio">$10,159.00</p>
+                <button onclick="addToCart(1, 'Benelli 502c', 10159)">Añadir al carrito</button>
+            </div>
+
+            <div class="moto" data-id="2">
+                <img src="moto_2.jpeg" alt="Moto 2" class="moto-img">
+                <h3>Benelli Imperiale 400</h3>
+                <p class="precio">$5,159.00</p>
+                <button onclick="addToCart(2, 'Benelli Imperiale 400', 5159)">Añadir al carrito</button>
+            </div>
+
+            <div class="moto" data-id="3">
+                <img src="moto_3.jpeg" alt="Moto 3" class="moto-img">
+                <h3>BENELLI 752S </h3>
+                <p class="precio">$13,999.00</p>
+                <button onclick="addToCart(3, 'BENELLI 752S BLANCO', 13999)">Añadir al carrito</button>
+            </div>
+
+            <div class="moto" data-id="4">
+                <img src="moto_4.jpeg" alt="Moto 4" class="moto-img">
+                <h3>Benelli 180S</h3>
+                <p class="precio">$4,159.00</p>
+                <button onclick="addToCart(4, 'Benelli 180S', 4159)">Añadir al carrito</button>
+            </div>
+
+            <div class="moto" data-id="5">
+                <img src="moto_5.jpeg" alt="Moto 5" class="moto-img">
+                <h3>Benelli TNT25N</h3>
+                <p class="precio">$4,100.00</p>
+                <button onclick="addToCart(5, 'Benelli TNT25N', 4100)">Añadir al carrito</button>
+            </div>
+
+            <div class="moto" data-id="6">
+                <img src="moto_6.jpeg" alt="Moto 6" class="moto-img">
+                <h3>BENELLI TRK502 X </h3>
+                <p class="precio">$12,150.00</p>
+                <button onclick="addToCart(6, 'BENELLI TRK502 X BLANCA', 12150)">Añadir al carrito</button>
+            </div>
+
+            <div class="moto" data-id="7">
+                <img src="moto_7.jpeg" alt="Moto 7" class="moto-img">
+                <h3>Ducati Hypermotard 950 RVE Concept</h3>
+                <p class="precio">$24,990.00</p>
+                <button onclick="addToCart(7, 'Ducati Hypermotard 950 RVE Concept', 24990)">Añadir al carrito</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="java.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concesionario de Motos</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="fondo2.PNG" alt="Logo" width="160px">
+            <div><a href="#">Inicio</a></div>
+            <div><a href="motocicletas.html">Motocicletas</a></div>
+            <div><a href="#">Contactos</a></div>
+            <div><a href="compra.html">🛒Compra ahora</a></div>
+            <div id="user-name">
+                <a href="formulario.html" id="login-link">Iniciar sesión</a>
+            </div>
+            
+            
+            <div id="logout-container">
+                <a href="#" id="logout-link" style="display: none;" id="logout-button">Cerrar sesión</a>
+            </div>
+            <script src="guardado.js"></script>
+
+        </nav>
+    </header>
+
+    <div class="carousel">
+        <div class="carousel-images">
+            <img src="banner1.webp" alt="Moto 1" class="active">
+            <img src="banner2.webp" alt="Moto 2">
+            <img src="banner3.webp" alt="Moto 3">
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+
+    
+    
+    <hr style="border: 0.5px solid #c0bebe; width: 50%; margin: 20px auto;">
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="fondo2.PNG" alt="Honda Logo">
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>MotorRiders</h4>
+                    <ul>
+                        <li><a href="#">Compra ahora</a></li>
+                        <li><a href="#">Concesionarios</a></li>
+                        <li><a href="#">Financia tu Moto</a></li>
+                        <li><a href="#">MotorRiders te Cuenta</a></li>
+                        <li><a href="#">Mi Moto </a></li>
+                        <li><a href="#">Live Store</a></li>
+                        <li><a href="#">Ayuda y Preguntas</a></li>
+                        <li><a href="#">Campañas de Seguridad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>MotorRiders te cuenta</h4>
+                    <ul>
+                        <li><a href="#">Noticias y Blog</a></li>
+                        <li><a href="#">Videos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="#">Bogotá: 745 90 36</a></li>
+                        <li><a href="#">Medellín: 520 28 91</a></li>
+                        <li><a href="#">Cali: 347 22 25</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="carrusel.js"></script>
+    
+</body>
+</html>
+
