@@ -20,10 +20,10 @@ function moveSlide(direction) {
     showSlide(currentSlide);
 }
 
-// Inicializar el primer slide
+
 showSlide(currentSlide);
 
-// Opcional: Auto-play del carrusel
-setInterval(() => moveSlide(1), 5000); // Cambia de imagen cada 5 segundos
+
+setInterval(() => moveSlide(1), 5000); 
 
 

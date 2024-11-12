@@ -1,15 +1,16 @@
-let cart = JSON.parse(localStorage.getItem("cart")) || []; // Cargar el carrito del localStorage
+let cart = JSON.parse(localStorage.getItem("cart")) || []; 
 
 function addToCart(id, name, price) {
-    const item = { id, name, price };
+    const motoImage = document.querySelector(`.moto[data-id="${id}"] img`).src; 
+    const item = { id, name, price, motoImage }; 
     cart.push(item);
-    localStorage.setItem("cart", JSON.stringify(cart)); // Guardar el carrito en localStorage
+    localStorage.setItem("cart", JSON.stringify(cart)); 
     alert(`${name} añadido al carrito.`);
 }
 
 function updateCartDisplay() {
     const cartItemsContainer = document.getElementById("carrito-items");
-    cartItemsContainer.innerHTML = ""; // Limpiar la vista actual
+    cartItemsContainer.innerHTML = ""; 
 
     if (cart.length === 0) {
         cartItemsContainer.innerHTML = "<p>Tu carrito está vacío.</p>";
@@ -18,8 +19,9 @@ function updateCartDisplay() {
 
     cart.forEach((item, index) => {
         const itemDiv = document.createElement("div");
-        itemDiv.className = "moto"; // Puedes ajustar el estilo según necesites
+        itemDiv.className = "moto"; 
         itemDiv.innerHTML = `
+            <img src="${item.motoImage}" alt="${item.name}" class="moto-img">
             <h3>${item.name}</h3>
             <p class="precio">$${item.price.toFixed(2)}</p>
             <button onclick="removeFromCart(${index})">Eliminar</button>
@@ -30,7 +32,7 @@ function updateCartDisplay() {
 
 function removeFromCart(index) {
     cart.splice(index, 1);
-    localStorage.setItem("cart", JSON.stringify(cart)); // Actualizar el carrito en localStorage
+    localStorage.setItem("cart", JSON.stringify(cart)); 
     updateCartDisplay();
 }
 
@@ -41,12 +43,11 @@ function pagar() {
     }
     const total = cart.reduce((sum, item) => sum + item.price, 0);
     alert(`Total a pagar: $${total.toFixed(2)}`);
-    // Aquí puedes agregar lógica adicional para procesar el pago
-    cart = []; // Vaciar el carrito después del pago
-    localStorage.removeItem("cart"); // Eliminar el carrito del localStorage
-    updateCartDisplay(); // Actualizar la vista
+    
+    cart = []; 
+    localStorage.removeItem("cart"); 
+    updateCartDisplay(); 
 }
 
-// Llamar a la función para actualizar la vista del carrito al cargar la página
-updateCartDisplay();
 
+updateCartDisplay();
