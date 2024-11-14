@@ -34,6 +34,31 @@ header {
     text-align: center; 
 }
 
+.quantity-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.quantity-container button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.quantity-container button:hover {
+    background-color: #ff0000;
+}
+
+.quantity-container span {
+    margin: 0 10px;
+    font-size: 1.2rem;
+}
+
 /* Carrusel de imágenes */
 .carousel {
     position: relative;
@@ -99,12 +124,10 @@ header {
 }
 
 .moto {
-    width: 300px; /* Ajusta el ancho del cuadro de la moto */
+    width: 300px;
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     padding: 15px;
     transition: transform 0.3s;
@@ -115,7 +138,7 @@ header {
 }
 
 .moto img {
-    width: 100%; /* La imagen ocupará todo el ancho del cuadro */
+    width: 100%;
     height: auto;
     border-bottom: 1px solid #ddd;
 }
@@ -133,7 +156,7 @@ header {
 }
 
 .moto button {
-    background-color: #000000; /* Cambia el color según la paleta de colores de tu sitio */
+    background-color: #000000;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -149,7 +172,7 @@ header {
 
 
 
-/* Contenedor específico para la página de carrito */
+
 .carrito-pagina .carrito {
     padding: 20px;
     max-width: 1000px;
@@ -157,6 +180,7 @@ header {
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    text-align: center;
 }
 
 .carrito-pagina .carrito h2 {
@@ -165,7 +189,7 @@ header {
     color: #333;
 }
 
-/* Estilo para los productos en el carrito */
+
 .carrito-pagina #carrito-items {
     display: flex;
     flex-direction: column;
@@ -200,21 +224,22 @@ header {
 
 /* Botón de pagar en la página del carrito */
 .carrito-pagina button {
-    background-color: #000000;
+    background-color: #000;
     color: #fff;
-    font-size: 18px;
-    padding: 12px 20px;
     border: none;
-    border-radius: 5px;
+    padding: 10px 20px;
     cursor: pointer;
-    display: block;
-    width: 100%;
-    margin-top: 30px;
-    transition: background-color 0.3s ease;
+    border-radius: 5px;
 }
 
 .carrito-pagina button:hover {
     background-color: #ff0000;
+}
+
+.carrito-pagina #total-price {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 20px;
 }
 
 /* Estilos para el formulario */

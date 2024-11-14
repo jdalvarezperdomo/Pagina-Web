@@ -11,18 +11,15 @@
         <nav class="navbar">
             <img src="fondo2.PNG" alt="Logo" width="160px">
             <div><a href="index.html">Inicio</a></div>
-            <div><a href="motocicletas.html">Motocicletas</a></div>
+            <div><a href="#">Motocicletas</a></div>
             <div><a href="#">Contactos</a></div>
             <div><a href="compra.html">🛒Compra ahora</a></div>
             <div id="user-name">
                 <a href="formulario.html" id="login-link">Iniciar sesión</a>
             </div>
-            
-            
             <div id="logout-container">
                 <a href="#" id="logout-link" style="display: none;" id="logout-button">Cerrar sesión</a>
             </div>
-
             <script src="guardado.js"></script>
         </nav>
     </header>
@@ -32,13 +29,15 @@
         <div id="carrito-items" class="moto-cards">
             
         </div>
+        <p id="total" class="total"></p> 
+        <button onclick="emptyCart()">Vaciar Carrito</button>
         <button id="pagar" onclick="pagar()">Pagar</button>
     </div>
 
     <script src="java.js"></script>
-    
 </body>
 </html>
+
 
 
 
